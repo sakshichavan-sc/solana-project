@@ -1,0 +1,17 @@
+[package]
+name = "dummy-dex"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "dummy_dex"
+
+[features]
+no-entrypoint = []
+cpi = ["no-entrypoint"]
+default = []
+
+[dependencies]
+anchor-lang = "=0.31.1"
+anchor-spl = { version = "=0.31.1", features = ["token_2022"] }
